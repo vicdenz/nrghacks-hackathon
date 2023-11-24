@@ -100,7 +100,7 @@ a {
 }
 
 .header-images img {
-  width: 100px; /* Adjust width as needed */
+  width: 300px; /* Adjust width as needed */
   height: auto; /* Maintain aspect ratio */
   margin-left: 10px; /* Space between images */
   /* Add more styling as needed */

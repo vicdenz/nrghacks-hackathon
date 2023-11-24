@@ -13,6 +13,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ClassroomPage from "./pages/ClassroomPage";
+import SignUpPage from "./pages/SignUpPage";
 
 export default function App() {
 	return (
@@ -21,6 +22,7 @@ export default function App() {
 				<Route element={<Layout />}>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/classrooms/:id" element={<ClassroomPage />} />
+					<Route path="/sign-up" element={<SignUpPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
