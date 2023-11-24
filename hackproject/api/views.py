@@ -1,6 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-# from .utils import get_classrooms, getNoteDetail, deleteNote, getNotesList, createNote
+from .utils import get_classrooms, get_classroom, create_classroom, update_classroom, delete_classroom
 
 @api_view(['GET'])
 def getRoutes(request):
@@ -39,24 +39,24 @@ def getRoutes(request):
     ]
     return Response(routes)
 
-# @api_view(['GET', 'POST'])
-# def getNotes(request):
+@api_view(['GET', 'POST'])
+def get_classrooms_view(request):
 
-#     if request.method == 'GET':
-#         return getNotesList(request)
+    if request.method == 'GET':
+        return get_classrooms(request)
 
-#     if request.method == 'POST':
-#         return createNote(request)
+    if request.method == 'POST':
+        return create_classroom(request)
 
 
-# @api_view(['GET', 'PUT', 'DELETE'])
-# def getNote(request, pk):
+@api_view(['GET', 'PUT', 'DELETE'])
+def get_classroom_view(request, pk):
 
-#     if request.method == 'GET':
-#         return getNoteDetail(request, pk)
+    if request.method == 'GET':
+        return get_classroom(request, pk)
 
-#     if request.method == 'PUT':
-#         return updateNote(request, pk)
+    if request.method == 'PUT':
+        return update_classroom(request, pk)
 
-#     if request.method == 'DELETE':
-#         return deleteNote(request, pk)
+    if request.method == 'DELETE':
+        return delete_classroom(request, pk)
