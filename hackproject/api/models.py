@@ -26,7 +26,6 @@ class Classroom(models.Model):
 
 	instant_alert = models.BooleanField(
 		verbose_name="Instant Alert",
-		default_value=True,
 	)
 
 	report_regularity = models.CharField(
