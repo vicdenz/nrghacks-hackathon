@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SignUpPage = () => {
+    let navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         username: '',
         email: '',
@@ -18,6 +21,7 @@ const SignUpPage = () => {
         e.preventDefault();
         console.log('Form submitted:', formData);
         // Here you would typically send the data to a server
+        navigate("/classroom");
     };
 
     return (
