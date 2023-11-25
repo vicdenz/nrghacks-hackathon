@@ -5,6 +5,7 @@ import image1 from "../assets/images/title1.jpeg";
 import image2 from "../assets/images/title2.jpeg";
 import image3 from "../assets/images/title3.jpeg";
 import image4 from "../assets/images/title4.jpeg";
+import software from "../assets/images/software.png";
 
 const HomePage = () => {
 	return (

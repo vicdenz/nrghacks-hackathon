@@ -20,7 +20,7 @@ function ClassroomPage() {
 
   return (
     <div className="rainbow-gradient">
-      <button onClick={addDraggable}>Add Draggable</button>
+      <button onClick={addDraggable}>Add Student</button>
       <div>
       {draggables.map((text, index) => (
         <Draggable
