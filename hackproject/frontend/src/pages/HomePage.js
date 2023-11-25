@@ -11,6 +11,7 @@ const HomePage = () => {
         <>
             <div className="column1">
                 <Header />
+                
             </div>
             <div className="column2">
                 <div className="header-images">

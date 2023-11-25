@@ -11,7 +11,7 @@ const Navbar = () => {
         <Link to="/about" className="nav-item">About</Link>
         <Link to="/contact" className="nav-item">Contact</Link>
 		<Link to="/login" className="nav-item">Log In</Link>
-		<Link to="/signup" className="nav-item">Sign Up</Link>
+		<Link to="/sign-up" className="nav-item">Sign Up</Link>
         {/* Add more navigation links as needed */}
       </div>
     </nav>

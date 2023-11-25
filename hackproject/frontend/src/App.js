@@ -14,6 +14,7 @@ import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage";
 import ClassroomPage from "./pages/ClassroomPage";
 import SignUpPage from "./pages/SignUpPage";
+import LoginPage from "./pages/LoginPage";
 
 export default function App() {
 	return (
@@ -23,6 +24,7 @@ export default function App() {
 					<Route path="/" element={<HomePage />} />
 					<Route path="/classrooms/:id" element={<ClassroomPage />} />
 					<Route path="/sign-up" element={<SignUpPage />} />
+					<Route path="/login" element={<LoginPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
