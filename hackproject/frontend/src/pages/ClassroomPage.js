@@ -21,21 +21,28 @@ function ClassroomPage() {
   return (
     <div className="rainbow-gradient">
       <button onClick={addDraggable}>Add Student</button>
+      <div className="ratings">
+        <h1>Excellent</h1>
+        <h1>Good</h1>
+        <h1>Okay</h1>
+        <h1>Satisfactory</h1>
+        <h1>Needs Improvement</h1>
+      </div>
       <div>
-      {draggables.map((text, index) => (
-        <Draggable
-          key={index}
-          onStart={handleStart}
-          onDrag={handleDrag}
-          onStop={handleStop}>
-          <div className="box">
-            <textarea
-              onChange={handleChange(index)}
-              value={text}
-            ></textarea>
-          </div>
-        </Draggable>
-      ))}
+        {draggables.map((text, index) => (
+          <Draggable
+            key={index}
+            onStart={handleStart}
+            onDrag={handleDrag}
+            onStop={handleStop}>
+            <div className="box">
+              <textarea
+                onChange={handleChange(index)}
+                value={text}
+              ></textarea>
+            </div>
+          </Draggable>
+        ))}
       </div>
     </div>
   );
