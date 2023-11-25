@@ -31,6 +31,7 @@ class Classroom(models.Model):
 	report_regularity = models.CharField(
 		verbose_name="Regularity Of Reports",
 		choices=REPORT_REGULARITY_CHOICES,
+		max_length=20,
 	)
 
 class Student(models.Model):
@@ -57,6 +58,7 @@ class Student(models.Model):
 		verbose_name="Gender",
 		choices=GENDER_CHOICES,
 		blank=True,
+		max_length=6,
 	)
 
 	parent_email = models.EmailField(
