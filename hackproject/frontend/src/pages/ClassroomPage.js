@@ -1,33 +1,44 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from 'react';
 import Draggable from 'react-draggable';
 
-const ClassroomPage = () => {
+function ClassroomPage() {
+  const [draggables, setDraggables] = useState([]);
 
-  // This function will be called when dragging starts
-  const handleStart = (e, data) => {
-    console.log('Drag started at: ', data.x, data.y);
+  const addDraggable = () => {
+    setDraggables([...draggables, '']);
   };
 
-  // This function will be called while dragging
-  const handleDrag = (e, data) => {
-    console.log('Dragging at: ', data.x, data.y);
-  };
+  const handleStart = () => { /* ... */ };
+  const handleDrag = () => { /* ... */ };
+  const handleStop = () => { /* ... */ };
 
-  // This function will be called when dragging stops
-  const handleStop = (e, data) => {
-    console.log('Drag stopped at: ', data.x, data.y);
+  const handleChange = (index) => (event) => {
+    const newDraggables = [...draggables];
+    newDraggables[index] = event.target.value;
+    setDraggables(newDraggables);
   };
 
   return (
-    <Draggable
-      onStart={handleStart}
-      onDrag={handleDrag}
-      onStop={handleStop}>
-      <div className="box">
-        I can be dragged
+    <div className="rainbow-gradient">
+      <div>
+      {draggables.map((text, index) => (
+        <Draggable
+          key={index}
+          onStart={handleStart}
+          onDrag={handleDrag}
+          onStop={handleStop}>
+          <div className="box">
+            <textarea
+              onChange={handleChange(index)}
+              value={text}
+            ></textarea>
+          </div>
+        </Draggable>
+      ))}
       </div>
-    </Draggable>
+      <button onClick={addDraggable}>Add Draggable</button>
+    </div>
   );
-};
+}
 
 export default ClassroomPage;

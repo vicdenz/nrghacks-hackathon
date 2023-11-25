@@ -370,3 +370,18 @@ button {
 button:hover {
     background-color: var(--color-secondaryGreen);
 }
+
+.rainbow-gradient {
+	width: 100%; /* Width of the rectangle */
+	height: 100%; /* Height of the rectangle */
+	background: linear-gradient(
+	  to bottom, 
+	  red, 
+	  orange, 
+	  yellow, 
+	  green, 
+	  blue, 
+	  indigo, 
+	  violet
+	);
+  }

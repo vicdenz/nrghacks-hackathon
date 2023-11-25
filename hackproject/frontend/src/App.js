@@ -22,7 +22,7 @@ export default function App() {
 			<Routes>
 				<Route element={<Layout />}>
 					<Route path="/" element={<HomePage />} />
-					<Route path="/classrooms/:id" element={<ClassroomPage />} />
+					<Route path="/classroom" element={<ClassroomPage />} />
 					<Route path="/sign-up" element={<SignUpPage />} />
 					<Route path="/login" element={<LoginPage />} />
 				</Route>
